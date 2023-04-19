@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% set title="404" %}
+
+{% block styles %}
+<link href='{{url_for("static", filename="stylesheets/404.css")}}' rel='stylesheet'/>
+{% endblock %}
+
+
+{% block content %}
+<div class="text-center mx-auto container p-2 m-2" id="main">
+  <h1 class="display-2" style="color: var(--blue)">Those Who Wander Are Not Always Lost ...</h1>
+  <img src="static/images/confused.png" id = "main-image" class = "img-fluid p-3 m-3">
+  <img src="static/images/post.png" id = "sub-image" class = "img-fluid p-3 m-3">
+  <h1 class="display-3" style="color: var(--blue)">... But You Definetely Are</h1>
+</div>
+{% endblock %}

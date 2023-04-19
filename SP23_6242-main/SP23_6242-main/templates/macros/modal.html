@@ -1,0 +1,25 @@
+{% macro modal() %}
+
+  <div id="myModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Password types</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6>Simple Passwords</h6>
+            <p>Simple passwords are two random words, put together, followed by a number. They do not contain symbols. They're always kid-friendly!</p>
+            <h6>Moderate Passwords</h6>
+            <p>Moderate passwords are slightly more secure. They contain two random words put together, but will also include symbols and 3 numbers at the end.</p>
+            <h6>Strong Passwords</h6>
+            <p>Strong passwords are the most secure. They will contain a random mix of letters, numbers, and symbols. With strong passwords, several additional settings will show, allowing you more control of your generated passwords.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+{% endmacro %}

@@ -1,0 +1,128 @@
+{% extends 'layout.html' %} {% block styles %}
+<link
+  href='{{url_for("static", filename="stylesheets/home.css")}}'
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+{% endblock %} {% block content %}
+<!-- Update this block to update what html content is rendered -->
+
+{% from "macros/modal.html" import modal %}
+{{ modal() }}
+
+<main class="p-4">
+  <div class="text-center">
+    <img src="../static/images/main_page_logo_light.png" />
+    <h1 class="display-2" style="color: var(--blue)">Wizard Pass_</h1>
+    <p>
+      The powerful password generator built by <u>CodeWizardsHQ</u> students.
+    </p>
+    <span class="material-symbols-outlined my-4">
+      keyboard_double_arrow_down
+    </span>
+  </div>
+
+  <div id="generate_password" class="p-5 my-3 rounded text-white row p-auto">
+
+    <h1 class="text-center">Generate Password</h1>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-3">
+      <p class="m-0">Choose a password type:</p>
+
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="password-difficulty"
+          value="simple"
+          checked
+        />
+        <label class="form-check-label" for="password-difficulty">
+          Simple
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="password-difficulty"
+          value="moderate"
+        />
+        <label class="form-check-label" for="password-difficulty">
+          Moderate
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="password-difficulty"
+          value="complex"
+        />
+        <label class="form-check-label" for="password-difficulty">
+          Complex
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="password-number">How many passwords?</label>
+        <input
+          type="number"
+          class="form-control"
+          id="password-number"
+          placeholder="1"
+          min="1"
+          max="10"
+        />
+      </div>
+      <button class="btn btn-light my-3" id="generate-password">
+        Generate
+      </button>
+    </div>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-3">
+      <button class="btn btn-light my-3" id="export-to-csv">
+        Export to CSV
+      </button>
+
+      <div style="height: 10rem" class="overflow-auto" id="passwords-list">
+        <template id="password">
+          <div class="input-group mb-3 animate__animated animate__fadeIn">
+            <input
+              type="text"
+              class="form-control password_text"
+              aria-label="Password"
+              aria-describedby="basic-addon2"
+            />
+
+            <span class="material-symbols-outlined btn btn-light copy_password">
+              content_copy
+            </span>
+            <span
+              class="material-symbols-outlined btn btn-light delete_password"
+            >
+              close
+            </span>
+          </div>
+        </template>
+      </div>
+
+      <button class="btn btn-light rounded-pill" id="add_another_password">
+        <span class="material-symbols-outlined"> add </span>Add Another
+      </button>
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+  {% endblock %} {% block scripts %}
+  <!-- Delete the scripts block if not needed -->
+  <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+  {% endblock %}
+</main>

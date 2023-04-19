@@ -1,0 +1,44 @@
+html,
+body {
+  --blue: rgba(78, 165, 217, 1);
+}
+
+#generate_password {
+  background-image: url("/static/images/main_page_time_machine_amico_light.png");
+  background-position: bottom 0px right 0px;
+  background-color: var(--blue);
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] #generate_password {
+  background-color: #F5CB5C !important;
+  color: #242432 !important;  
+}
+
+[data-theme="dark"] #generate_password p, [data-theme="dark"] #generate_password h1 {
+  color: #242432 !important;  
+}
+
+[data-theme="dark"] #generate_password button {
+  background: #343A40 !important;
+  color: #FFFFFF !important;  
+  border: #343A40 !important;
+}
+
+[data-theme="dark"] img[src="../static/images/main_page_logo_light.png"] {
+  content: url("/static/images/main_page_logo_dark.png") !important;
+  width: 300px !important;
+  height: 300px !important;
+}
+
+[data-theme="dark"] span {
+  color: #FAFAFA !important;
+}
+
+[data-theme="dark"] main div h1 {
+  color: #F5CB5C !important;
+}
+
+[data-theme="dark"] .modal-body p {
+  color: #212529 !important;
+}

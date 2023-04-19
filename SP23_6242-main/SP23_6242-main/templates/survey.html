@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block styles %}
+    <link href='{{url_for("static", filename="stylesheets/survey.css")}}' rel='stylesheet'/>
+{% endblock %}
+
+{% block content %}
+<!-- Update this block to update what html content is rendered -->
+<div class="d-flex justify-content-center container-lg flex-grow-1" style="min-height: 100vh;">
+  <div class="row row-cols-2 gx-1 page_text align-items-center">
+      <div class="col text-center p-5">
+          <img src="../static/images/survey_page_logo_light.png">
+          <p id="image_subtext">See what the community said in response to the cybersecurity survey.</p>
+          <a href="{{url_for('survey.surveyform')}}"><button type="button" class="btn btn-outline-primary">Fill the survey</button></a>
+      </div>
+      <div class="col text-center p-5">
+        <div class="row p-2" style="width: 600px;">
+          <div class="row p-2" id="top_about_text" style="width: 520px;">
+            <div class="chart" id="piechart" style="width: 250px; height: 200px;"></div>        
+            <div class="chart" id="piechart2" style="width: 250px; height: 200px;"></div>           
+          </div>
+          <div class="row"  style="width: 515px;">
+            <div class="col m-1" style="background-color: #e3dfde;">
+              <p class="chart-text" style="text-align: center;">Which of the following best describes your cyber hygiene?</p>
+            </div>
+            <div class="col m-1" style="background-color: #e3dfde;">
+              <p class="chart-text" style="text-align: center;">Are your passwords the same for all of your online accounts?</p>
+            </div>
+          </div>
+        </div>
+        <div class="row p-2" style="width: 600px;">
+          <div class="row p-2" style="width: 520px;">
+            <div class="chart" id="piechart3" style="width: 250px; height: 200px;"></div>
+            <div class="chart" id="piechart4" style="width: 250px; height: 200px;"></div>
+          </div>
+          <div class="row" style="width: 515px;">
+            <div class="col m-1" style="background-color: #e3dfde;">
+              <p class="chart-text" style="text-align: center;">How complex are your existing passwords?</p>
+            </div>
+            <div class="col m-1" style="background-color: #e3dfde;">
+              <p class="chart-text" style="text-align: center;">Have you given out personal information online?</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row p-2" style="width: 600px;">
+          <div class="row p-2" style="width: 520px;">
+            <div class="chart" id="piechart5" style="width: 250px; height: 200px;"></div>
+          </div>
+        </div>
+        
+        <div class="row" style="width: 260px;">
+          <div class="col m-1" style="background-color: #e3dfde;">
+            <p class="chart-text" style="text-align: center;">Do you plan on improving your cyber hygiene?</p>
+          </div>
+        </div>
+          
+        
+      </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Delete the scripts block if not needed -->
+    <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/survey.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'layout.html' %} {% block styles %}
+<link
+  href='{{url_for("static", filename="stylesheets/statistics.css")}}'
+  rel="stylesheet"
+/>
+{% endblock %} {% block content %}
+
+<!-- <div id="dark-switch" class="form-check form-switch position-absolute end-0">
+    <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+</div> -->
+
+<div class="row d-flex justify-content-center container-lg flex-grow-1 mt-5">
+  <div id="stat-card" class="p-5 mt-4 col">
+    <div class="card border-0 mb-3">
+      <img
+        src="{{url_for('static', filename='images/statistics_page_logo_dark.png')}}"
+        class="card-img-top"
+      />
+      <div class="card-body">
+        <h6 id="card-title" style="font-family: Oxygen; font-weight: 700">
+          Statistics
+        </h6>
+        <p id="stat-card-text">
+          Check how Wizard Pass has been used through its lifetime.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-3 d-inline-block col">
+    <div class="row">
+      <div
+        class="row border border-2 col m-2"
+        id="stats_chart"
+        style="width: 250px; height: 200px"
+      ></div>
+
+      <div class="border border-2 col m-2 p-2" style="height: 200px">
+        <p class="card-text">Number of passwords generated</p>
+        <h6 id="number-of-passwords-generated">...</h6>
+        <p class="card-text">Number of passwords generated (last 30 days)</p>
+        <h6 id="passwords-generated-30-days">...</h6>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="border border-2 col m-2 p-2" style="height: 200px">
+        <p class="card-text">Max passwords generated at once</p>
+        <h6 id="max-passwords-generated">...</h6>
+        <p class="card-text">Average passwords generated at once</p>
+        <h6 id="average-passwords-generated">...</h6>
+      </div>
+
+      <div class="border border-2 col m-2 p-2" style="height: 200px">
+        <p class="card-text center" style="text-align: center">
+          Strong password settings
+        </p>
+        <p class="card-text">Average password length</p>
+        <h6 id="average_password_length">...</h6>
+        <p class="card-text">Min number of symbols</p>
+        <h6 id="min_symbols">...</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block scripts %}
+<script src="{{url_for('static', filename='javascript/statistics.js')}}"></script>
+{% endblock %}

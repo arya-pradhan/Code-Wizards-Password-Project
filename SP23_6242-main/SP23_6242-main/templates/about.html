@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block styles %}
+    <link href='{{url_for("static", filename="stylesheets/about.css")}}' rel='stylesheet'/>
+    
+    
+{% endblock %}
+
+{% block content %}
+    <!-- 
+    justify-content-center: centers horizontally 
+    flex-grow-1: div takes up all available space
+    style="min-height: 100vh;": sets the height of the div to take up entire veiwport height 
+    aligh-items-center: centers vertically inside the given height
+    -->
+    <div class="d-flex justify-content-center container-lg flex-grow-1">
+        <div class="row gx-2 align-items-center container-lg">
+
+            <div class="col-lg-6 text-center p-3 container-fluid">
+                <img class ="mb-5 img-fluid"  src="../static/images/about_page_logo_light.png">
+                <h1 id="image_heading">About Wizard Pass</h1>
+                <p id="image_subtext" >Story behind the powerful password generator built by CodewizardsHQ students.</p>
+            </div>
+
+            <div class="col-lg-6 text-center container-fluid p-3">
+                    <div id="top_about_text" class="container-fluid text-wrap">
+                        <p class ="mb-3">
+                            CodeWizardsHQ gives students the necessary skills to build platforms like this one. Over the course of several years of study in live, online coding classes, students acquired the necessary skills to develop and deploy a full-stack web application that helps users solve real-world problems. 
+                        </p>
+                    </div>
+                    <div id="bottom_about_text" class="container-fluid text-wrap">
+                        <p class ="mb-3">
+                            Students learn skills necessary to become successful back end developers, such as Python, Flask, and databases. They also spend several courses learning and applying front end concepts such as design frameworks, interactive webpages, and more. As a culmination of all of their CodeWizardsHQ coursework, students apply for and are selected to participate in a months-long group project.
+                        </p>
+                        <p class ="mb-3">
+                            Wizard Pass contributes to the ever-evolving cyber landscape by helping users generate strong passwords to avoid account compromise. With complex, brute-force, password-guessing computer algorithms becoming more available, the need to increase awareness and use of strong passwords is prevalent. 
+                        </p>
+                        <p class ="mb-3">
+                            In keeping with best security practice, Wizard Pass does not store any of these passwords; once you leave the page, the passwords are unavailable.
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

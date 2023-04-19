@@ -1,0 +1,42 @@
+.em-wider {
+    letter-spacing: 0.3px;
+  }
+
+.chart {
+    border: 2px solid grey;
+  }
+
+.chart-text {
+  font-size: 15px;
+}
+
+[data-theme="dark"] img[src="../static/images/survey_page_logo_light.png"] {
+  content: url("/static/images/survey_page_logo_black.png") !important;
+  height: 500px !important;
+  width: 500px !important;
+}
+
+[data-theme="dark"] img[src="../static/images/survey_form_logo_light.png"] {
+  content: url("/static/images/survey_form_logo_dark.png") !important;
+  height: 320px;
+  width: 320px;
+}
+
+[data-theme="dark"] button:not(button[type="submit"]) {
+  --bs-btn-color: #FFC107 !important;
+  --bs-btn-border-color: #FFC107 !important;
+  --bs-btn-hover-bg: #FFC107 !important;
+  --bs-btn-hover-color: #1e1e1e !important;
+  --bs-btn-hover-border-color: #FFC107 !important;
+  --bs-btn-active-color: #1e1e1e!important;
+  --bs-btn-active-bg: #FFC107 !important;
+  --bs-btn-active-border-color: #FFc107 !important;
+}
+
+[data-theme="dark"] #questions-container {
+  color:#FFFFFF !important;
+}
+
+[data-theme="dark"] div.col.m-1 {
+  background: #333333 !important;
+}

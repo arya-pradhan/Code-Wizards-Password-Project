@@ -1,0 +1,25 @@
+/* 
+  This affects all templates. 
+  Only update this css file if intending to apply universal styling to all templates
+  If you wish to update bootstrap defaults checkout the link below to see how to use css variables
+  https://getbootstrap.com/docs/5.2/customize/css-variables/
+ */
+
+[data-theme="dark"] {
+  background-color: #1E1E1E !important;
+}
+[data-theme="dark"] p, [data-theme="dark"] h1, [data-theme="dark"] h2 {
+  color: #FAFAFA !important;
+}
+
+/* navbar, footer, and dark mode slider */
+[data-theme="dark"] nav, [data-theme="dark"] #page-footer {
+  background: #333533 !important;
+}
+[data-theme="dark"] nav a {
+  color: #ABB5BE !important;
+}
+
+[data-theme="dark"] label[for=darkModeSlider] {
+  color: #EEEEEE !important;
+}

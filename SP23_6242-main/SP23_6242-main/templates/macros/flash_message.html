@@ -1,0 +1,19 @@
+{% macro flash_message() %}
+<!doctype html>
+<title>My Application</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes p-3 m-3">
+        <div class=" container alert alert-success object-fit-contain border rounded" role="alert">
+          
+    {% for message in messages %}
+      <li class="text-center">{{ message }}</li>
+    {% endfor %}
+        </div>
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% block body %}{% endblock %}
+
+{% endmacro %}

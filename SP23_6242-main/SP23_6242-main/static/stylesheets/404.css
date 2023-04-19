@@ -1,0 +1,18 @@
+html,
+body {
+  --blue: rgba(78, 165, 217, 1);
+}
+
+#main{
+    background-color: rgb(247, 247, 247);
+    border-radius: 15px 50px;
+    max-width: 80%;
+}
+#main-image{
+    height: 50vh;
+
+}
+
+#sub-image{
+    height: 20vh;
+}

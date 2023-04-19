@@ -1,0 +1,47 @@
+#stat-card {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#darkSwitch {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+.biigG {
+  display: inline-block;
+}
+
+#bottomsUp {
+  margin: auto;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#leftBottom {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#rightBottom {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#card-title {
+  text-align: center;
+  font-size: 32px;
+}
+
+#stat-card-text {
+  font-family: Source Sans Pro;
+  text-align: center;
+  font-size: 16px;
+}
+
+[data-theme="dark"] .card {
+  background: #1e1e1e !important;
+  color: #fafafa !important;
+  border: none !important;
+}
